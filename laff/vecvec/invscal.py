@@ -1,3 +1,4 @@
+import numpy as np
 from numpy import matrix
 from numpy import shape 
 
@@ -20,9 +21,13 @@ def invscal(alpha, x):
     m_x, n_x = x.shape
     
     assert m_x == 1 or n_x == 1, "laff.copy: x is not a vector"
+    
+    x = np.divide(x,alpha)
 
+    '''
     if m_x == 1: # x is a row
         for i in range(n_x): x[0, i] = x[0, i] / alpha[ 0,0 ]
             
     elif n_x == 1: # x is a column
         for i in range(m_x): x[i, 0] = x[i, 0] / alpha[ 0,0 ]
+    '''
