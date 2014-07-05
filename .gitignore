@@ -1,2 +1,55 @@
-*.pyc
+!src/*
+!config/*
+!src/test
 
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+#Fit Framework
+fitnesse-standalone.jar
+FitNesseRoot/*.*
+
+#Misc
+venv/*
+developer
+*.pub
+vps
+cloud9/
+npm-debug.log
+project.json
+.gitignore.swp
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+.settings
+
+# Sphinx documentation
+docs/_build/
+FitNesseRoot
+configc
+developer
+fitnesse-standalone.jar
+vps
+vps.pub
+developer

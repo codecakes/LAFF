@@ -39,8 +39,8 @@ def ger(alpha, y, x, A):
     m_A, n_A = A.shape
 
 
-    assert m_x is 1 or n_x is 1, "laff.ger: x is not a vector"
-    assert m_y is 1 or n_y is 1, "laff.axpy: y is not a vector"
+    assert m_x == 1 or n_x == 1, "laff.ger: x is not a vector"
+    assert m_y == 1 or n_y == 1, "laff.axpy: y is not a vector"
 
     if m_x is 1 and m_y is 1: # x is a row, y is a row
         assert n_y == m_A, "laff.ger: size mismatch between y and A"
