@@ -181,8 +181,8 @@ def repart_2x1_to_3x1(AT, \
 
 def repart_2x2_to_3x3(ATL, ATR, \
                       ABL, ABR,   m=1, n=1, quad='BR'):
-    hpart = ATL.shape[0] - m if quad in ('TL', 'TR') else m
-    vpart = ATL.shape[1] - n if quad in ('TL', 'BL') else n
+    hpart = int(ATL.shape[0] - m) if quad in ('TL', 'TR') else int(m)
+    vpart = int(ATL.shape[1] - n) if quad in ('TL', 'BL') else int(n)
 
     if quad == 'TL':
         A00, A01, A02 = ATL[:hpart, :vpart], ATL[:hpart, vpart:], ATR[:hpart, :]

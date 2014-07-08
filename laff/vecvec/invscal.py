@@ -22,7 +22,8 @@ def invscal(alpha, x):
     
     assert m_x == 1 or n_x == 1, "laff.copy: x is not a vector"
     
-    x = np.divide(x,alpha)
+    if alpha:
+        x = np.divide(x,alpha)
 
     '''
     if m_x == 1: # x is a row
