@@ -31,6 +31,7 @@ def gemv(trans, alpha, A, x, beta, y):
 
     if(type(beta) is matrix):
         m_beta, n_beta = beta.shape
+        print(m_beta, n_beta)
         assert m_beta == 1 and n_beta == 1, "laff.gemv: beta is neither a scalar nor a 1 x 1 matrix"
         scalar_beta = beta[0,0]
     else:
