@@ -56,9 +56,9 @@ def trsv(uplo, trans, diag, A, b ):
     m_A, n_A = A.shape
     m_b, n_b = b.shape
 
-    assert m_b is 1 or n_b is 1, "laff.trsv: b is not a vector"
+    assert m_b == 1 or n_b == 1, "laff.trsv: b is not a vector"
 
-    if n_b is 1: # b is a column
+    if n_b == 1: # b is a column
         assert m_b == n_A, "laff.trsv: size mismatch between b and A"
 
         if 'Lower triangular' == uplo:
